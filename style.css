@@ -11,27 +11,7 @@
   font-weight: bold;
   font-style: normal;
 }
-@font-face {
-   font-family: "KudryashevHeadline-Sans";
-   src: url(../fonts/KudryashevDisplay-Sans.ttf);
-   font-weight: bold;
-   font-style: normal;
- }
- @font-face {
-   font-family: "  kudry_weird-headline";
-   src: url(../fonts/kudry_weird-headline.otf);
-   font-weight: bold;
-   font-style: normal;
- }
 
-
-body{      width: 100%;
-         margin: 0;
-         overflow-x: hidden;
-         padding: 0;
-         background-color: rgba(19, 44, 66, 0);
-         z-index: 0;
-         height: 100%; }
 
            header{position: absolute;}
 
@@ -196,7 +176,7 @@ body{      width: 100%;
                .green, .blue{width: 100%;height: 85vw;overflow: hidden;}
            
                 /* IMG */
-        .img{width: 100 absolute;
+        .img{width:100);position :absolute;
               left:-40%;}
               #event-svg{position: absolute;transform: scaleY(3.6);top: 64vw;}
      
