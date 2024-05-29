@@ -69,16 +69,16 @@ top: 0;
   background: #0417616c;
 
  height: 100vh;
-  width: 30%;
+  width: 50%;
   z-index: 55;
-  left: -150%;z-index: 99;
+  left: -114%;z-index: 99;
 }
 .menu-one {
 position: fixed;
 top: 0;
   background: #0417616c;
-  width: 30%;z-index:559;
-  right:0%;
+  width: 50%;z-index:559;
+  right:-70%;
   height: 100vh;
 }
 #door-left,#door-right{fill:rgba(4, 70, 162, 0.807);stroke: gold;

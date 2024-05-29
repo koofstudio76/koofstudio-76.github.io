@@ -21,8 +21,8 @@ gsap.registerPlugin("ScrollTrigger");
    gsap.to(".box2", {
       scrollTrigger: {
      trigger: ".box2",
-     start: "top 255%",
-     end: "bottom 65%",
+     start: "top 195%",
+     end: "bottom 55%",
      scrub:4,   
       },
       r:459,
