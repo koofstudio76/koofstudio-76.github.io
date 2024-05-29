@@ -78,7 +78,7 @@ position: fixed;
 top: 0;
   background: #0417616c;
   width: 30%;z-index:559;
-  right:-110%;
+  right:0%;
   height: 100vh;
 }
 #door-left,#door-right{fill:rgba(4, 70, 162, 0.807);stroke: gold;
