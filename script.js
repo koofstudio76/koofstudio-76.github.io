@@ -1,38 +1,19 @@
-var nav_height = $(".animation-container").height();
-var nav_piece_height = 10;
-var counter = 0;
+let nav = document.querySelector('.nav')
 
-$(document).ready(function(){
-  for(i = 0; i < (nav_height/nav_piece_height); i++){
-    if((i%2) == 0){//If even add right piece
-      $(".animation-container").append("<div class='nav-right-piece'></div>");
-    }else{//If odd add left piece
-      $(".animation-container").append("<div class='nav-left-piece'></div>");
-    }
-  }
+let tween = gsap.to(".purple", {
+  duration: 4, 
+  x: () => nav.offsetWidth, // animate by the px width of the nav
+  xPercent: -100, // offset by the width of the box
+  rotation: 360, 
+  ease: "none", 
+  paused: true
 });
 
-$(".nav-button").click(function(){
-  //animate all the individual nav lines
-  $(".animation-container .nav-right-piece, .nav-left-piece").each(function(i,el) {
-    var $this = $(this);
-    setTimeout(function() {
-      $this.toggleClass('animate-nav-piece');
-      //after animating nav lines animate the list
-      if(i == Math.floor(nav_height/nav_piece_height)){
-        animate_list();
-      }
-    }, i*25); // milliseconds
-  });
+  const state = Flip.getState(".purple, .box");
   
-  
-});
-
-function animate_list(){
-  $(".text-container li").each(function(i,el) {
-    var $this = $(this);
-    setTimeout(function() {
-      $this.toggleClass('animate-nav-li');
-    }, i*75); // milliseconds
-  });
-}
+// click handlers for controlling the tween instance...
+document.querySelector("#play").onclick = () => tween.play();
+document.querySelector("#pause").onclick = () => tween.pause();
+document.querySelector("#resume").onclick = () => tween.resume();
+document.querySelector("#reverse").onclick = () => tween.reverse();
+document.querySelector("#restart").onclick = () => tween.restart();
